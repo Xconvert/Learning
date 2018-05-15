@@ -1,6 +1,7 @@
 #include <iostream> 
 #include <vector>
 #include<algorithm>
+#include<string>
 using namespace std;
 
 /*||提高代码适用性，参数传递函数的指针*/
@@ -67,6 +68,84 @@ void testPrint() {
 https://www.nowcoder.com/practice/f9c6f980eeec43ef85be20755ddbeaf4?tpId=37&tqId=21239&tPage=1&rp=&ru=/ta/huawei&qru=/ta/huawei/question-ranking
 ||*/
 
+/*||switch用法*/
+void testSwith(int a) {
+	switch (a){
+	case 1: {
+		break;
+	}
+	default:
+		break;
+	}
+}
+/*switch用法||*/
+
+/*|string to int/char to int*/
+void teststoi() {
+	string a("211");
+	char b[10] = "211";
+	int t;
+	t = stoi(a);//在头文件string里面
+	cout << t << endl;
+	t = atoi(b);//在头文件stdlib.h里面
+	cout << t << endl;
+}
+/*
+1、itoa
+功 能:把一整数转换为字符串
+用 法:char *itoa(int value, char *string, int radix);
+详细解释:itoa是英文integer to array(将int整型数转化为一个字符串,并将值保存在数组string中)的缩写.
+参数:
+value: 待转化的整数。
+radix: 是基数的意思,即先将value转化为radix进制的数，范围介于2-36，比如10表示10进制，16表示16进制。
+* string: 保存转换后得到的字符串。
+返回值:
+char * : 指向生成的字符串， 同*string。
+备注:该函数的头文件是"stdlib.h"
+
+2、ltoa
+功 能:把一长整形转换为字符串
+用 法:char *ltoa(long value, char *string, int radix);
+
+3、ultoa
+功 能:把一无符号长整形转换为字符串
+用 法:char *ultoa(unsigned long value, char *string, int radix);
+
+4、gcvt
+功 能:把浮点型数转换为字符串，取四舍五入
+用 法:char *gcvt(double value, int ndigit, char *buf);
+详细解释:gcvt()用来将参数number转换成ASCII码字符串，参数ndigits表示显示的位数。
+gcvt()与ecvt()和fcvt()不同的地方在于，gcvt()所转换后的字符串包含小数点或正负符号。若转换成功，转换后的字符串会放在参数buf指针所指的空间。
+参 数:
+value:待转化的浮点数。
+ndigit:存储的有效数字位数。
+*buf:结果的存储位置。
+
+5、ecvt
+功 能:将双精度浮点型数转换为字符串，转换结果中不包括十进制小数点
+用 法:char *ecvt(double value, int ndigit, int *decpt, int *sign);
+详细解释:ecvt函数把一个双精度浮点数转换成一个字符串。value参数是要转换的浮点数。
+这个函数存储最多ndigit个数字值作为一个字符串,并添加一个空数字符('\0'),如果value中的数字个数超过ndigit,低位数字被舍入。
+如果少于ndigit个数字,该字符串用0填充。《保留几位有效数字》
+
+只有数字才存储在该字符串中,小数点位置和value符号在调用之后从decpt和sign获取。
+decpt参数指出给出小数点位置的整数值,它是从该字符串的开头位置计算的。0或负数指出小数点在第一个数字的左边。
+sign参数指出一个指出转换的数的符号的整数。如果该整数为0,这个数为正数,否则为负数。
+
+参 数:
+value:待转换的双精度浮点数。
+ndigit:存储的有效数字位数。
+*decpt:存储的小数点位置。
+*sign:转换的数的符号。
+
+6、fcvt
+功 能:指定位数为转换精度，其余同ecvt
+用 法:char *fcvt(double value, int ndigit, int *decpt, int *sign);
+详细解释:参与转换的实际值保留的小数位数由ndigit决定。
+如果少于ndigit个数字,不填充。《保留几位小数》。
+
+*/
+/*string to int/char to int|*/
 
 int main() {
 	//testisEven();/*提高代码适用性，参数传递函数的指针*/
