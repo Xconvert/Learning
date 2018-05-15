@@ -63,6 +63,11 @@ void testPrint() {
 
 /*仿函数的学习||*/
 
+/*||动态规划学习
+https://www.nowcoder.com/practice/f9c6f980eeec43ef85be20755ddbeaf4?tpId=37&tqId=21239&tPage=1&rp=&ru=/ta/huawei&qru=/ta/huawei/question-ranking
+||*/
+
+
 int main() {
 	//testisEven();/*提高代码适用性，参数传递函数的指针*/
 	testPrint();/*仿函数的学习*/
