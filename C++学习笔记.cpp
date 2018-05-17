@@ -147,7 +147,26 @@ ndigit:存储的有效数字位数。
 */
 /*string to int/char to int|*/
 
+/*||struct的默认构造函数与string的初始化*/
+struct error {//struct里面默认是public，class默认是private
+	string er;
+	int rowNum;
+	//error():er(""),rowNum(0){}//或者：error():rowNum(0){}
+	/*
+	  1、此处的string是默认为""的，但是我们不能用NULL来初始化他，会报错
+	  2、默认构造函数只能有一个。所以下面的默认构造函数比较好
+	*/
+	error(string error = "", int n = 0) :er(error), rowNum(n) {}
+};
+void testStruct() {
+	struct error e;
+	cout << e.er << endl;
+}
+/*struct的默认构造函数与string的初始化||*/
+
 int main() {
 	//testisEven();/*提高代码适用性，参数传递函数的指针*/
-	testPrint();/*仿函数的学习*/
+	//testPrint();/*仿函数的学习*/
+	testStruct();/*struct的默认构造函数与string的初始化*/
+
 }
